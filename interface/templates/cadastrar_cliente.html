@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Cliente</title>
+</head>
+<body>
+    <div>
+        <p class="msg-erro"> {{ mensagem }}</p>
+    </div>
+    <div>
+        <form action="{{ url_for('cadastrar_cliente') }}", method="post">
+            Matricula do cliente:
+            <input type="number" min="0" name="matricula" placeholder="Apenas números" required><br>
+            CPF:
+            <input type="text" name="cpf" placeholder="xxx.xxx.xxx-xx" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" \ required><br>
+            Nome do cliente:
+            <input type="text" name="nome" placeholder="Nome completo"required><br>
+            Endereço do cliente:
+            <input type="text" name="endereco" placeholder="Endereço" required><br>
+            <input type="submit" name="Cadastrar" value="Cadastrar">
+        </form>
+    </div>
+</body>
+</html>

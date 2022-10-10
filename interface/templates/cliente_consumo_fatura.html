@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumo da Fatura atual</title>
+</head>
+<body>
+    <div>
+        {% block content %}
+            {% if mostrar_consumo %}
+                <h1> O consumo da fatura atual do cliente com matrícula {{ matricula }} é de: {{ consumo_fatura_atual }} m³ </h1>
+            {% else %}
+                <h1> Erro! Não foi possível obter o consumo da fatura atual do cliente. </h1>
+            {% endif %}
+        {% endblock %} 
+    </div>
+</body>
+</html>

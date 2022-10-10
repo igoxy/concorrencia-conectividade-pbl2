@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de clientes</title>
+</head>
+<body>
+    <div>
+        <p> {{ mensagem }} </p>
+        {% block content %}
+            {% if erro %}
+                <h1> Erro ao listar os clientes. Tente novamente! </h1>
+            {% else %} 
+                <form action="{{ url_for('clientes') }}" method="post">
+                    <ol>
+                        {% for cliente in clientes %}
+                            <li> <input type="radio" name="cliente" required value="{{ clientes[cliente]['matricula'] }}"> {{clientes[cliente]['nome']}} - {{'%03d'%clientes[cliente]['matricula'] }}  </li>
+                            <br>
+                        {% endfor %}
+                    </ol>
+                    <input type="submit" name="botao" value="Gerar fatura do cliente">
+                    <input type="submit" name="botao" value="Bloquear cliente">
+                </form>
+            {% endif %}
+        {% endblock %}
+    </div>
+</body>
+</html>
