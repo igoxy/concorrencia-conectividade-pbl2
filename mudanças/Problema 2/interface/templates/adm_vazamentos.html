@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vazamentos</title>
+</head>
+<body>
+    <div>
+        {% block content %}
+            {% if erro %}
+                <h1> Erro ao solicitar endereços com possível vazamento. Tente novamente! </h1>
+            {% else %}
+                <ol>
+                    <h1> Locais com possíveis vazamentos </h1>
+                    {% for endereco in enderecos %}
+                        <li> {{enderecos[endereco]['endereco']}} </li>
+                        <br>
+                    {% endfor %}
+                </ol>
+            {% endif %}
+        {% endblock %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+matricula,nome,cpf,ativo,pendencia,endereco,possivelVazamento
+001,fulano1,929.124.250-00,True,False,Rua A - Campo Limpo - 2,False
+002,fulano2,773.928.570-61,True,False,Rua B - Campo Limpo - 2,False
+003,fulano3,827.086.480-39,True,False,Rua C - Campo Limpo - 2,False
+004,fulano4,287.613.940-50,True,False,Rua D - Campo Limpo - 2,False

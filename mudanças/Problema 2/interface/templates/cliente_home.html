@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ol>
+        <li><a href="{{ url_for('consumo_fatura', matricula=matricula) }}"> Consumo da fatura atual </a></li>
+        <li><a href="{{ url_for('consumo_periodos', matricula=matricula) }}"> Consumo em períodos </a></li>  
+        <li><a href="{{ url_for('consumo_total', matricula=matricula) }}"> Consumo total </a></li>
+        <li><a href="{{ url_for('fatura', matricula=matricula) }}"> Obter fatura </a></li>  
+    </ol>
+
+</body>
+</html>
